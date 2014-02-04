@@ -3,15 +3,15 @@
 	<div class="uni-time-navigation smooth-move">
 		<div class="uni-time-timenav">
 			<div class="uni-time-content smoothable" style="left: {{x}}px">
-				<div class="marker" style="left: 618px;">
-					<div class="flag" style="top: 100px;">
+				<div class="marker" ng-repeat="event in events" ng-class="{'active': event.active}" style="left: {{event.position}}px;">
+					<div class="flag" style="top: {{event.verticalPosition}}px;" ng-click="event.click()">
 						<div class="flag-content">
 							<svg>
 								<path class="flag-img"
 									xmlns="http://www.w3.org/2000/svg"
-									d="m4.25,0.25l139.75,0.25c5.433807,0 5,-0.68379 5,4.75l0,34.75c0,5.433792 0.433807,5 -5,5l-129.14983,0l-10.60017,10l0,-10l0,-44.75z"></path>
+									d="m0.25,0.25l139.75,0.25c5.433807,0 5,-0.68379 5,4.75l0,34.75c0,5.433792 0.433807,5 -5,5l-129.14983,0l-10.60017,10l0,-10l0,-44.75z"></path>
 							</svg>
-							<h3>Timeline Content</h3>
+							<h3>{{event.title}}</h3>
 						</div>
 					</div>
 					<div class="dot"></div>

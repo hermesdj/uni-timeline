@@ -10,8 +10,39 @@
  */
 
 
-angular.module('uniTimeline', ['ngAnimate'])
-	.directive('uniTimeline', function($window, $document) {
+angular.module('uniTimeline', [])
+	.provider('$uniTimeline', function(){
+		var events = [];
+		var eras = [];
+		this.$get = function(){
+			return {
+				addEvent: function(event){
+					events.push(event);
+				},
+				removeEvent: function(event){
+					if(this.indexOf(event) != -1) {
+				        return events.splice(this.indexOf(event), 1);
+				    }   
+				},
+				addEra: function(era){
+					eras.push(era);
+				},
+				removeEra: function(era){
+					if(this.indexOf(era) != -1) {
+				        return eras.splice(this.indexOf(era), 1);
+				    }
+					return false;
+				},
+				dateToPixel: function(date){
+					
+				},
+				pixelToDate: function(pixel){
+					
+				}
+			};
+		};
+	})
+	.directive('uniTimeline', ['$window', '$document', '$uniTimeline', function($window, $document, $uniTimeline) {
 			return {
 				restrict : 'EA',
 				templateUrl : 'templates/timeline.html',
@@ -23,6 +54,17 @@ angular.module('uniTimeline', ['ngAnimate'])
 				controller: function($scope, $element){
 					$scope.dates = {};
 					$scope.dates.major = [];
+					$scope.events = [];
+					$scope.events.push({
+						title: "An event title",
+						content: "An event content",
+						position: "600",
+						verticalPosition: "45",
+						active: false,
+						click: function(){
+							this.active = !this.active;
+						}
+					});
 					
 					for(i = $scope.start; i <= $scope.end; i+=100){
 						$scope.dates.major.push(i);
@@ -72,4 +114,4 @@ angular.module('uniTimeline', ['ngAnimate'])
 				}
 			};
 
-		});
+		}]);

@@ -260,19 +260,17 @@
 
 .uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker.active .flag {
 	width: 153px;
-	height: 53px;
+	height: 56px;
 }
 
 .uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker.active .flag-small .flag-content {
-	padding: 0 7px 2px 6px;
 	overflow: hidden;
-	height: 36px;
+	height: 56px;
 }
 
 .uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker.active .flag .flag-content {
-	padding: 0 7px 2px 6px;
 	overflow: hidden;
-	height: 36px;
+	height: 56px;
 }
 
 .uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker .flag h3, .uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker .flag-small h3 {
@@ -283,6 +281,12 @@
 	line-height: 11px;
 	color: #999;
 	margin-bottom: 2px;
+}
+
+.uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker .flag {
+	margin-top: 5px;
+	position: absolute;
+	top: 10px;
 }
 
 .uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker .flag h3{
@@ -310,6 +314,13 @@
 	cursor: pointer;
 }
 
+.uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker.active .flag .flag-img, .uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker.active:hover .flag .flag-img {
+	fill: #fff;
+	stroke-width : 1;
+	stroke: #08c;
+	cursor: pointer;
+}
+
 .uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker:hover .flag h3 {
 	cursor: pointer;
 }
@@ -317,7 +328,7 @@
 .uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker .dot {
 	position: absolute;
 	top: 150px;
-	left: 0;
+	left: -2.5px;
 	display: block;
 	width: 6px;
 	height: 6px;
@@ -336,7 +347,7 @@
 .uni-time .uni-time-navigation .uni-time-timenav .uni-time-content .marker .line {
 	position: absolute;
 	top: 0;
-	left: 3px;
+	left: 0px;
 	width: 1px;
 	height: 150px;
 	background-color: #ccc;
