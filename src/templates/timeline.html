@@ -1,0 +1,51 @@
+<div class="uni-time-container uni-time-main">
+	<div class="uni-time-overlay"></div>
+	<div class="uni-time-navigation smooth-move">
+		<div class="uni-time-timenav">
+			<div class="uni-time-content smoothable" style="left: {{x}}px">
+				<div class="marker" style="left: 618px;">
+					<div class="flag" style="top: 100px;">
+						<div class="flag-content">
+							<div class="thumbnail thumb-youtube"></div>
+							<h3>Timeline Content</h3>
+						</div>
+						<svg>
+							<polygon points="5,0 158,0 158,56 5,56" style="fill:white" />
+						</svg>
+					</div>
+					<div class="dot"></div>
+					<div class="line">
+						<div class="event-line"></div>
+					</div>
+				</div>
+			</div>
+			<div class="uni-time-time smoothable" style="left: {{x}}px">
+				<div class="uni-time-time-interval-minor">
+					<div class="minor"
+						style="left: -1353.6244292218798px; width: 4906.999999996709px;"></div>
+				</div>
+				<div class="uni-time-time-interval-major">
+					<div ng-repeat="date in dates.major"
+						style="text-indent: -13px; opacity: 100; left: {{$index*  1000}}px">{{date}}</div>
+				</div>
+				<div class="uni-time-time-interval">
+					<div ng-repeat="date in dates.minor"
+						ng-show="dates.major.indexOf(date) == -1"
+						style="text-indent: -10.5px; opacity: 100; left: {{$index*  100}}px">{{date}}</div>
+				</div>
+			</div>
+		</div>
+		<div class="uni-time-timenav-background">
+			<div class="uni-time-timenav-line"  style="left: {{indicatorX + 10}}px"></div>
+			<div class="uni-time-timenav-indicator"  style="left: {{indicatorX}}px">
+				<svg height="30px" width="30px"
+					class="uni-time-timenav-indivator-svg">
+					<polygon points="0,0 10,12 14,12 24,0" style="fill:white;" />
+				</svg>
+			</div>
+			<div class="uni-time-timenav-interval-background">
+				<div class="top-highlight"></div>
+			</div>
+		</div>
+	</div>
+</div>

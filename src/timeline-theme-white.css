@@ -1,0 +1,50 @@
+.uni-time {
+	background-color: #fff;
+}
+
+.uni-time .uni-time-navigation {
+	cursor: move;
+	border-top: 1px solid #e3e3e3;
+}
+
+.uni-time .uni-time-navigation .uni-time-timenav .uni-time-time{
+	background-color: #fff;
+}
+
+.uni-time .uni-time-navigation .uni-time-timenav .uni-time-time .uni-time-time-interval-minor .minor {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAMCAMAAACdvocfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFzMzM////040VdgAAAAJ0Uk5T/wDltzBKAAAAEklEQVR42mJgYAQCBopJgAADAAbwADHy2qHzAAAAAElFTkSuQmCC);
+	width: 100px;
+	height: 6px;
+	background-position: center top;
+	color: #666;
+}
+
+.uni-time .uni-time-navigation .uni-time-timenav-background .uni-time-timenav-interval-background .top-highlight{
+	background: #fff;
+	filter: alpha(opacity=50);
+	-khtml-opacity: .5;
+	-moz-opacity: .5;
+	opacity: .5;
+}
+
+.uni-time .uni-time-navigation .uni-time-timenav-background .uni-time-timenav-indicator{
+	width: 24px;
+	height: 24px;
+}
+
+.uni-time .uni-time-navigation .uni-time-timenav-background .uni-time-timenav-indicator svg polygon{
+	fill: white;
+	z-index: 2;
+}
+
+.uni-time .uni-time-navigation .uni-time-timenav-background .uni-time-timenav-interval-background{
+	background: #fff;
+}
+
+.uni-time .uni-time-navigation .uni-time-timenav-background{
+	background-color: #e9e9e9;
+}
+
+.uni-time .uni-time-navigation .uni-time-timenav-background .uni-time-timenav-line{
+	background-color: #08c;
+}
