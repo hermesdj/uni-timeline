@@ -11,7 +11,7 @@
   ],
   "dependencies": {
 	  "angular": "~1.2.11"
-  }
+  },
   "devDependencies": {
     "angular-animate": "~1.2.9"
   }

@@ -1,9 +1,10 @@
 {
   "name": "angular-timeline",
   "version": "0.1.0",
-  "description": "A beautiful timeline for angularjs",
+  "description": "A beautiful timeline directive for angularjs",
   "main": "src/timeline.js",
-  "homepage": "http://localhost",
+  "homepage": "https://github.com/hermesdj/angular-timeline",
+  "bugs": "https://github.com/hermesdj/angular-timeline/issues",
   "directories": {
     "example": "example",
     "test": "test"
@@ -15,7 +16,7 @@
     "timeline",
     "unirpg"
   ],
-  "author": "Jeremy Dallard",
+  "author": "Jeremy Dallard <dallardj@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "karma-script-launcher": "~0.1.0",

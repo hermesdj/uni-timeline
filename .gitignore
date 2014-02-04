@@ -3,4 +3,5 @@ test/coverage
 bower_components
 .settings
 .externalToolBuilders
-.project
+.projectnpm-debug.log
+npm-debug.log
