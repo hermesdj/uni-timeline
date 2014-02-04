@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "description": "A beautiful timeline directive for angularjs",
   "main": "src/timeline.js",
-  "homepage": "https://github.com/hermesdj/angular-timeline",
-  "bugs": "https://github.com/hermesdj/angular-timeline/issues",
+  "homepage": "https://github.com/hermesdj/uni-timeline",
+  "bugs": "https://github.com/hermesdj/uni-timeline/issues",
   "directories": {
     "example": "example",
     "test": "test"
   },
-  "repository": {},
+  "repository": "https://github.com/hermesdj/uni-timeline",
   "keywords": [
     "angular",
     "angularjs",

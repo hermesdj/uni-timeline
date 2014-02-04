@@ -37,6 +37,7 @@ This is a work in progress project !
 2. Download the required dependencies
 
 The project need **npm**, **bower** and **grunt** to be installed
+Be sure to also have karma installed
 
 ### Install the project
 

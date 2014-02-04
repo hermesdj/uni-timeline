@@ -1,0 +1,10 @@
+.example {
+	width: 75%;
+	margin: auto;
+	overflow-x: hidden;
+}
+
+.example form {
+	width: 70%;
+	margin: auto;
+}

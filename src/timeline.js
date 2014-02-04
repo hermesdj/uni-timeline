@@ -12,50 +12,104 @@
 
 angular.module('uniTimeline', [])
 	.provider('$uniTimeline', function(){
-		var events = [];
-		var eras = [];
 		this.$get = function(){
-			return {
-				addEvent: function(event){
-					events.push(event);
+			var events = [], eras = [];
+			
+			/**
+			 * Manage events content
+			 */
+			var eventManager = {
+				get: function(index){
+					if(index){
+						if(events.indexOf(event) != -1) {
+					        return events[index];
+					    }else{
+					    	return null;
+					    }
+					}else{
+						return events;
+					}
 				},
-				removeEvent: function(event){
-					if(this.indexOf(event) != -1) {
+				add: function(event){
+					events.push(angular.copy(event));
+				},
+				remove: function(event){
+					if(events.indexOf(event) != -1) {
 				        return events.splice(this.indexOf(event), 1);
-				    }   
-				},
-				addEra: function(era){
-					eras.push(era);
-				},
-				removeEra: function(era){
-					if(this.indexOf(era) != -1) {
-				        return eras.splice(this.indexOf(era), 1);
-				    }
+				    }  
 					return false;
 				},
+				update: function(event){
+					if(events.indexOf(event) != -1) {
+				        return events[events.indexOf(event)] = event;
+				    }
+					return false;
+				}
+			};
+			
+			/**
+			 * Manage era content
+			 */
+			var eraManager = {
+					get: function(index){
+						if(index){
+							if(eras.indexOf(event) != -1) {
+						        return eras[index];
+						    }else{
+						    	return null;
+						    }
+						}else{
+							return eras;
+						}
+					},
+					add: function(era){
+						eras.push(angular.copy(era));
+					},
+					remove: function(era){
+						if(era){
+							if(eras.indexOf(era) != -1) {
+						        return eras.splice(this.indexOf(era), 1);
+						    }
+						}else{
+							eras = [];
+						}
+					},
+					update: function(era){
+						if(eras.indexOf(era) != -1) {
+					        return eras[eras.indexOf(event)] = era;
+					    }
+						return false;
+					}	
+			};
+			
+			var tools = {
 				dateToPixel: function(date){
 					
 				},
 				pixelToDate: function(pixel){
 					
-				}
+				}	
+			};
+			return {
+				events: eventManager,
+				eras: eraManager,
+				tools: tools
 			};
 		};
 	})
-	.directive('uniTimeline', ['$window', '$document', '$uniTimeline', function($window, $document, $uniTimeline) {
-			return {
+	.directive('uniTimeline', ['$window', '$document', '$uniTimeline', function($window, $document, $uniTimeline) {	
+		return {
 				restrict : 'EA',
 				templateUrl : 'templates/timeline.html',
 				scope: {
-					start: '=start',
-					end: '=end',
-					current: '=current'
+					start: '=',
+					end: '=',
+					current: '='
 				},
-				controller: function($scope, $element){
+				link: function($scope, $element){
 					$scope.dates = {};
-					$scope.dates.major = [];
-					$scope.events = [];
 					
+					$scope.dates.major = [];
 					for(i = $scope.start; i <= $scope.end; i+=100){
 						$scope.dates.major.push(i);
 					}
@@ -63,6 +117,8 @@ angular.module('uniTimeline', [])
 					for(i = $scope.start; i <= $scope.end; i+=10){
 						$scope.dates.minor.push(i);
 					}
+					
+					$scope.events = $uniTimeline.events.get();
 					
 					/**
 					 * Center the indicator in the timeline
