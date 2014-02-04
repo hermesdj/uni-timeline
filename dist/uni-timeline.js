@@ -1,15 +1,7 @@
-/*
- * Angular Timeline directive
- * 
- * Add a new directive to angularjs displaying a beautiful
- * timeline. The content of the timeline can be updated in 
- * any angularjs scopes
- * 
- * (c) 2014 Jeremy Dallard
- * License: MIT
+/*! uni-timeline - v0.1.0 - 2014-02-04
+ * https://github.com/hermesdj/angular-timeline
+ * Copyright (c) Jeremy Dallard <dallardj@gmail.com> 2014 Licensed  
  */
-
-
 angular.module('uniTimeline', [])
 	.provider('$uniTimeline', function(){
 		var events = [];
