@@ -26,22 +26,25 @@ This is a work in progress project !
 1. Clone the git repository
 
 2. Download the required dependencies
+
 The project need **npm**, **bower** and **grunt** to be installed
 
 3. Install the project
+
 Run CMD on the root of the project then install it with npm :
 
 ```
 $ npm install
 ```
 
-4. download the required dependencies with bower
+download the required dependencies with bower
 
 ```
 $ bower install
 ```
 
-5. Run the gruntfile with the server option
+4. Run the server
+Run the gruntfile with the server option
 
 ```
 $ grunt server
