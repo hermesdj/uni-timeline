@@ -46,7 +46,7 @@ Run CMD on the root of the project then install it with npm :
 $ npm install
 ```
 
-### download the required dependencies with bower
+download the required dependencies with bower
 
 ```
 $ bower install
@@ -61,4 +61,4 @@ $ grunt server
 
 This will launch an express server and open the browser on the example.html file.
 It will bind an event listener for file changes in ./src and refresh automatically
-the brower.
+the browser.
