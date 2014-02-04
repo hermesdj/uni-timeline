@@ -5,3 +5,4 @@ bower_components
 .externalToolBuilders
 .projectnpm-debug.log
 npm-debug.log
+.README.md.html
