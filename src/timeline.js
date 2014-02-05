@@ -84,7 +84,7 @@ angular.module('uniTimeline', [])
 			
 			var tools = {
 				dateToPixel: function(date){
-					
+					return 400;
 				},
 				pixelToDate: function(pixel){
 					
@@ -118,6 +118,7 @@ angular.module('uniTimeline', [])
 						$scope.dates.minor.push(i);
 					}
 					
+					$scope.tools = $uniTimeline.tools;
 					$scope.events = $uniTimeline.events.get();
 					
 					/**

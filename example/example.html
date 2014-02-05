@@ -7,22 +7,24 @@
 <link rel="stylesheet" href="../src/timeline.css" class="lazyload" />
 <link rel="stylesheet" href="../src/timeline-theme-white.css"
 	class="lazyload" />
-<link rel="stylesheet" href="./example.css"
-	class="lazyload" />
+<link rel="stylesheet" href="./example.css" class="lazyload" />
 
 <script type="text/javascript"
 	src="../bower_components/angular/angular.js"></script>
 <script type="text/javascript"
 	src="../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../bower_components/angular-strap/dist/angular-strap.min.js"></script>
+<script
+	src="../bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
 <script type="text/javascript" src="../src/timeline.js"></script>
 <script type="text/javascript" src="../dist/uni-timeline.tpl.js"></script>
 <script type="text/javascript" src="./app.js"></script>
 </head>
 <body>
-	<div class="example" ng-controller="ExampleController">
+	<div class="container example" ng-controller="ExampleController">
 		<h1>Uni Timeline default example</h1>
 		<br />
-		<div style="height:200px;display:block;top:100px;">
+		<div style="height: 200px; display: block; top: 100px;">
 			<uni-timeline class="uni-time" start="1600" end="2000" current="1750"></uni-timeline>
 		</div>
 		<br />
@@ -36,10 +38,17 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="position" class="col-sm-2 control-label">Position</label>
+				<label for="position" class="col-sm-2 control-label">Start Date</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" ng-model="event.position"
-						placeholder="Position" required />
+					<input type="text" class="form-control" data-date-format="dd/MM/yyyy" ng-model="event.date.start" bs-datepicker
+						placeholder="Start Date" required   />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="position" class="col-sm-2 control-label">End Date <small>(Optional)</small></label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" ng-model="event.date.end" bs-datepicker
+						data-min-date="event.date.start" placeholder="End Date" />
 				</div>
 			</div>
 			<div class="form-group">
@@ -51,7 +60,8 @@
 			</div>
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
-					<button type="submit" class="btn btn-default" ng-click="submit(event)">Add event</button>
+					<button type="submit" class="btn btn-default"
+						ng-click="submit(event)">Add event</button>
 				</div>
 			</div>
 		</form>

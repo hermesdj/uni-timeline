@@ -3,7 +3,7 @@
 	<div class="uni-time-navigation smooth-move">
 		<div class="uni-time-timenav">
 			<div class="uni-time-content smoothable" style="left: {{x}}px">
-				<div class="marker" ng-repeat="event in events" ng-class="{'active': event.active}" style="left: {{event.position}}px;">
+				<div class="marker" ng-repeat="event in events" ng-class="{'active': event.active}" style="left: {{tools.dateToPixel(event.date.start)}}px;">
 					<div class="flag" style="top: {{event.verticalPosition}}px;" ng-click="event.click()">
 						<div class="flag-content">
 							<svg>

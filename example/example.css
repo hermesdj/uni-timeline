@@ -1,7 +1,11 @@
-.example {
+html, body {
+	height: 100%;
+}
+example {
 	width: 75%;
 	margin: auto;
 	overflow-x: hidden;
+	height:100%;
 }
 
 .example form {

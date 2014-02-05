@@ -1,7 +1,10 @@
 {
   "name": "angular-timeline",
   "version": "0.1.0",
-  "main": ["src/timeline.js", "src/timeline.css"],
+  "main": [
+    "src/timeline.js",
+    "src/timeline.css"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
@@ -10,7 +13,8 @@
     "example"
   ],
   "dependencies": {
-	  "angular": "~1.2.11"
+    "angular": "~1.2.11",
+    "angular-strap": "~2.0.0"
   },
   "devDependencies": {
     "angular-animate": "~1.2.9"
